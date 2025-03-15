@@ -20,8 +20,15 @@ programa
 			senao se(opcao == 2){
 				escreva("Digite o valor do saque: R$ ")
 				leia(saque)}
-			se(saque > saldo){
+				se(saque > saldo){
 					escreva("Saldo insuficiente!")
+				}
+					senao se (saldo <= 0){
+						escreva("\n Valor inválido - Digite um valor maior que zero.")
+					senao{
+						saldo = saldo - saque
+						escreva("\nSaque realizado com sucesso.\n")
+						escreva("\nNovo Saldo: R$",saldo, "\n")
 			}
 			senao se(opcao == 3){
 			   	pare	
