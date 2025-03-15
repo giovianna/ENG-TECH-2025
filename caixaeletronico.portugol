@@ -9,37 +9,38 @@ programa
 
 		enquanto(verdadeiro){
 			escreva("\n======Caixa Eletrônico=====\n")
+			escreva("Escolha uma opção: ")
 			escreva("1. Consultar saldo \n")
 			escreva("2. Sacar dinheiro \n")
 			escreva("3. Sair\n")
-			escreva("Escolha uma opção: ")
 			leia(opcao)
 
-			se(opcao == 1){
+			se (opcao == 1){
 				escreva("\n Seu saldo atual é: R$ ",saldo,"\n") }
-			senao se(opcao == 2){
+			senao se (opcao == 2){
 				escreva("Digite o valor do saque: R$ ")
-				leia(saque)}
-				se(saque > saldo){
+				leia(saque)
+				
+				se (saque > saldo){
 					escreva("Saldo insuficiente!")
 				}
-					senao se (saldo <= 0){
+				senao se (saque <= 0){
 						escreva("\n Valor inválido - Digite um valor maior que zero.")
-					senao{
-						saldo = saldo - saque
-						escreva("\nSaque realizado com sucesso.\n")
-						escreva("\nNovo Saldo: R$",saldo, "\n")
-			}
+						}
+				senao {
+					saldo = saldo - saque
+					escreva("\nSaque realizado com sucesso.\n")
+					escreva("\nNovo Saldo: R$",saldo, "\n")
+				}
+			}			
 			senao se(opcao == 3){
-			   	pare	
-			}
-			senao{
+				escreva("Obrigada por utilizar o Caixa Eletrônico!")
+			   	pare}
+			senao {
 				escreva("Opção Inválida!")
 			}
 			
 		}
-		
-		
 		
 	}
 }
